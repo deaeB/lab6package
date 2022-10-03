@@ -9,10 +9,10 @@
 #' 
 #' @export
 #' @samples
-#' brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500)
+#' brute_force_knapsack_optimize(x = knapsack_objects[1:8,], W = 3500)
 #' 
 
-brute_force_knapsack <- function(x, W){
+brute_force_knapsack_optimize <- function(x, W){
   # W is the knapsack size
   
   result_list <- list()
