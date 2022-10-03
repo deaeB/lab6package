@@ -2,8 +2,6 @@
 
 
 
-# t <- cbind(knapsack_objects[1:10,], N = c(1:nrow(knapsack_objects[1:10,])))
-
 
 knapsack_dynamic <- function(x, W){
   
@@ -51,7 +49,7 @@ knapsack_dynamic <- function(x, W){
       result_elements <- append(result_elements, i)
       j <- j - x[i, "w"]
       # check if arr_dyn[i, j] "jumped" from arr_dyn[i - 1, j]
-      # if so , 
+      # if so , store this element(i) and deduct the w[i] from j
     }
     else {
       # doing nothing, keep j, let i--
