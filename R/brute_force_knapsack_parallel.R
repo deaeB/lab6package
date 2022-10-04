@@ -49,6 +49,8 @@ brute_force_knapsack_parallel <- function(x, W, parallel = FALSE){
     
     outapply<- subset(outapply, w < W)
     result_par <- subset(outapply, v == max(unlist(outapply$v)))
+    # notes in cmdcheck :
+    # Undefined global functions or variables: v w
     
     result_elements <- which(intToBits(result_par$n) == 1)
     result_value <- round(as.numeric(result_par$v))
