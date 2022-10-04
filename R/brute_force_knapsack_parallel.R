@@ -39,7 +39,10 @@ brute_force_knapsack_parallel <- function(x, W, parallel = FALSE){
       return(out)
     }
     # initiate
-    corenum <- detectCores() 
+    corenum <- 2
+    # R Packages 1st edition, Chapter 17 Automated checking, 17.2.7 Documentation
+    # NB: you can’t use unexported functions and you shouldn’t open new graphics devices 
+    # or use more than two cores. Individual examples shouldn’t take more than 5s.
     cl <- makeCluster(getOption("cl.cores", corenum))
     # start parallel
     outapply<- as.data.frame(t(parSapply(cl, c, funapply)))
