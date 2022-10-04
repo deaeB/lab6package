@@ -7,7 +7,7 @@
 #' 
 #' @return the maximum knapsack value and which elements (rows in the data.frame)
 #' 
-#' @samples
+#' @examples
 #' brute_force_knapsack_optimize(x = knapsack_objects[1:8,], W = 3500)
 #' 
 #' @export

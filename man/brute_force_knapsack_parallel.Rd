@@ -19,3 +19,7 @@ the maximum knapsack value and which elements (rows in the data.frame)
 \description{
 going through all possible alternatives and return the maximum value found, with a choice of parallel.
 }
+\examples{
+brute_force_knapsack_parallel(x = knapsack_objects[1:8,], W = 3500, parallel = TRUE)
+
+}

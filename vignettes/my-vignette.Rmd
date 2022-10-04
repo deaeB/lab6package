@@ -1,0 +1,48 @@
+---
+title: "my-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(lab6package)
+
+# dataset knapsack_objects included
+knapsack_objects[1:10,]
+
+# brute_force_knapsack
+brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500)
+
+# knapsack_dynamic
+knapsack_dynamic(x = knapsack_objects[1:8,], W = 3500)
+
+#greedy_knapsack
+greedy_knapsack(x = knapsack_objects[1:8,], W = 3500)
+
+#systemtime
+system.time(brute_force_knapsack(x = knapsack_objects[1:18,], W = 3500))
+system.time(knapsack_dynamic(x = knapsack_objects[1:18,], W = 3500))
+system.time(greedy_knapsack(x = knapsack_objects[1:18,], W = 3500))
+
+#optimize
+knapsack_dynamic(x = knapsack_objects[1:18,], W = 3500)
+brute_force_knapsack_optimize(x = knapsack_objects[1:18,], W = 3500)
+brute_force_knapsack_parallel(x = knapsack_objects[1:18,], W = 3500, parallel = FALSE)
+brute_force_knapsack_parallel(x = knapsack_objects[1:18,], W = 3500, parallel = TRUE)
+#time
+system.time(brute_force_knapsack_optimize(x = knapsack_objects[1:18,], W = 3500))
+system.time(brute_force_knapsack_parallel(x = knapsack_objects[1:18,], W = 3500, parallel = FALSE))
+system.time(brute_force_knapsack_parallel(x = knapsack_objects[1:18,], W = 3500, parallel = TRUE))
+
+
+```

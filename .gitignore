@@ -40,3 +40,4 @@ vignettes/*.pdf
 
 # we do not want this on github
 *.Rproj
+inst/doc

@@ -7,7 +7,7 @@
 #' @return the maximum knapsack value and which elements (rows in the data.frame)
 #' 
 #' @export
-#' @samples
+#' @examples
 #' knapsack_dynamic(x = knapsack_objects[1:8,], W = 3500)
 
 
