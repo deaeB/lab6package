@@ -1,16 +1,17 @@
 #' Brute force search
 #'
-#' going through all possible alternatives and return the maximum value found.
+#' going through all possible alternatives and return the maximum value found, but faster.
 #' 
 #' @param x a data.frame with two variables v and w
 #' @param W the knapsack size, a positive number
 #' 
 #' @return the maximum knapsack value and which elements (rows in the data.frame)
 #' 
-#' @export
 #' @samples
 #' brute_force_knapsack_optimize(x = knapsack_objects[1:8,], W = 3500)
 #' 
+#' @export
+
 
 brute_force_knapsack_optimize <- function(x, W){
   # W is the knapsack size
@@ -28,8 +29,10 @@ brute_force_knapsack_optimize <- function(x, W){
   for (i in 1:2^n - 1) {
     elements <- which(intToBits(i) == 1)
     #elements to be tested
-    weight <- sum(x[elements, "w"])
-    value <- sum(x[elements, "v"])
+    weight <- sum(.subset2(x, 1)[elements])
+    value <- sum(.subset2(x, 2)[elements])
+    # .subset2  >> [[]] > []
+    # This is to avoid expensive unclassing when applying the default method to an object. 
     if ( weight < W ) {
       # elements can be contained by W-size knapsack
       if ( value > result_value ) {
@@ -44,4 +47,4 @@ brute_force_knapsack_optimize <- function(x, W){
   return(result_list)
 }
 
-# knapsack_brute_force(x = knapsack_objects[1:8,], W = 3500)
+

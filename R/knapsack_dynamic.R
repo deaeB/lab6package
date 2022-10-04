@@ -1,4 +1,14 @@
-
+#' dynamic knapsack
+#'
+#'
+#' @param x a data.frame with two variables v and w
+#' @param W the knapsack size, a positive number
+#' 
+#' @return the maximum knapsack value and which elements (rows in the data.frame)
+#' 
+#' @export
+#' @samples
+#' knapsack_dynamic(x = knapsack_objects[1:8,], W = 3500)
 
 
 

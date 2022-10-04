@@ -1,3 +1,14 @@
+#' greddy heuristic
+#' 
+#' @param x a data.frame with two variables v and w
+#' @param W the knapsack size, a positive number
+#' 
+#' @return the maximum knapsack value and which elements (rows in the data.frame)
+#' 
+#' @export
+#' @samples
+#' greedy_knapsack(x = knapsack_objects[1:8,], W = 3500)
+
 
 greedy_knapsack <- function(x, W){
   
