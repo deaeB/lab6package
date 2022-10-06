@@ -2,7 +2,7 @@
 % Please edit documentation in R/brute_force_knapsack_parallel.R
 \name{brute_force_knapsack_parallel}
 \alias{brute_force_knapsack_parallel}
-\title{Brute force search}
+\title{Brute force search parallel}
 \usage{
 brute_force_knapsack_parallel(x, W, parallel = FALSE)
 }

@@ -1,4 +1,4 @@
-#' Brute force search
+#' Brute force search parallel
 #'
 #' going through all possible alternatives and return the maximum value found, with a choice of parallel. 
 #' 

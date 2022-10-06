@@ -1,5 +1,6 @@
 #' dynamic knapsack
 #'
+#'solve the knapsack problem exact by iterating over all possible values of w
 #'
 #' @param x a data.frame with two variables v and w
 #' @param W the knapsack size, a positive number

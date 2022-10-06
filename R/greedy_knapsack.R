@@ -1,5 +1,7 @@
 #' greddy heuristic
 #' 
+#' use the a heuristic or approximation for the knapsack problem
+#' 
 #' @param x a data.frame with two variables v and w
 #' @param W the knapsack size, a positive number
 #' 

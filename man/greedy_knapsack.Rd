@@ -15,7 +15,7 @@ greedy_knapsack(x, W)
 the maximum knapsack value and which elements (rows in the data.frame)
 }
 \description{
-greddy heuristic
+use the a heuristic or approximation for the knapsack problem
 }
 \examples{
 greedy_knapsack(x = knapsack_objects[1:8,], W = 3500)

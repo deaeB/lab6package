@@ -2,7 +2,7 @@
 % Please edit documentation in R/brute_force_knapsack_optimize.R
 \name{brute_force_knapsack_optimize}
 \alias{brute_force_knapsack_optimize}
-\title{Brute force search}
+\title{Brute force search optimized}
 \usage{
 brute_force_knapsack_optimize(x, W)
 }

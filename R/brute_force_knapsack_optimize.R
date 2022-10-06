@@ -1,4 +1,4 @@
-#' Brute force search
+#' Brute force search optimized
 #'
 #' going through all possible alternatives and return the maximum value found, but faster.
 #' 

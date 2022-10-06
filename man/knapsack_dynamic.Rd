@@ -15,7 +15,7 @@ knapsack_dynamic(x, W)
 the maximum knapsack value and which elements (rows in the data.frame)
 }
 \description{
-dynamic knapsack
+solve the knapsack problem exact by iterating over all possible values of w
 }
 \examples{
 knapsack_dynamic(x = knapsack_objects[1:8,], W = 3500)
